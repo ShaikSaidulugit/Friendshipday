@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Friendship Day friends</title>
+</head>
+<body>
+    <div id="firstmain">
+        <h1><span style="color: rgb(247, 7, 215);">Shaik Saidulu</span> Invites You For Celebrating <br><span style="color: orange;">*Friend Ship Day*</span></h1>
+        <form>
+            <input type="text" placeholder="enter your name" id="firstinput">
+            <br>
+            <div id="sumbitpart">
+            <select id="selection">
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+            </select>
+            <input type="button" value="submit" onclick="Demo()">
+        </div>
+        </form>
+    </div>
+    <div id="secondmain">
+        <!-- <img src="https://w0.peakpx.com/wallpaper/481/745/HD-wallpaper-best-friends-m-a-visuals-clouds-friend-friendship-nature-sky-sunset.jpg" alt=""> -->
+        <img src="firstheadimage.png" alt="" id="firstimage"> 
+        <br>
+        <h1 id="headingone"></h1>
+        <h2 style="color: orange;">True Friends Are Really Rare.. <br>I'M So Lucky To Have You As My Friend</h2>
+        <br><br>
+
+        <h2>Do you know how i feel on you <span  onclick="Demo1()" style="cursor: pointer; color: orange; background-color: black;">click</span></h2>
+        <audio controls  loop id="audiosection">
+            <source src="WhatsApp Video 2024-08-04 at 2.55.18 PM.mp3" type="audio/mpeg">
+        </audio>
+    
+         </div>
+    <script>
+        const Demo=()=>{
+                    
+                    let data=document.getElementById("firstmain")
+                    let data1=document.getElementById("secondmain")
+                    data.style.display='none'
+                    data1.style.display='inline'
+
+                    let takeinput=document.getElementById("firstinput")
+                    let inputtwo=document.getElementById("selection")
+                    if(takeinput.value=="" || inputtwo.value==""){
+                                alert("Dear friend please enter your name and select mr. / mrs.")
+                                data1.style.display='none'
+                                data.style.display='inline'
+                    }else{
+                        document.getElementById("headingone").innerText="Happy Friendship day "+inputtwo.value+" "+takeinput.value
+                        inputtwo.style.color="aqua"
+                    }
+
+                    
+        }
+        const Demo1=()=>{
+            let show=document.getElementById("audiosection")
+            show.style.display='inline'
+        }
+    </script>
+</body>
+</html>
